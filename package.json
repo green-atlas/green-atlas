@@ -1,0 +1,38 @@
+{
+  "name": "greenatlas",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/green-atlas/green-atlas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/green-atlas/green-atlas/issues"
+  },
+  "homepage": "https://github.com/green-atlas/green-atlas#readme",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "next": "^15.5.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint-config-next": "^15.2.3",
+    "eslint-config-prettier": "^10.1.1",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
