@@ -1,33 +1,33 @@
 ---
-name: Add new Crypto service
-about: Suggest a new European Crypto service to be added to the directory
-title: 'Add: [Service Name]'
-labels: 'new service'
+name: Add new sustainability organization
+about: Suggest a new European sustainability organization to be added to the directory
+title: 'Add: [Organization Name]'
+labels: 'new organization'
 assignees: ''
 ---
 
-## Service Information
+## Organization Information
 
-**Service Name**:
-**Category**: <!-- e.g., Exchanges, Wallets, DeFi, NFT, etc. -->
+**Organization Name**:
+**Category**: <!-- e.g., Climate Action, Circular Economy, Green Tech, Social Impact, etc. -->
 **Description**: <!-- Brief description (max 150 characters) -->
 **Icon (emoji suggestion)**:
-**Country**: <!-- Where is the company headquartered? -->
+**Country**: <!-- Where is the organization headquartered? -->
 **Website URL**:
-**Crypto/Blockchain Component**: <!-- Describe the crypto/blockchain technology used by this service -->
+**Sustainability Focus**: <!-- Describe the organization's sustainability, ESG, or social impact focus -->
 
-## Why should this service be added?
+## Why should this organization be added?
 
-<!-- Please provide a brief explanation of why this service should be included in the Crypto Atlas. -->
+<!-- Please provide a brief explanation of why this organization should be included in the Green Atlas. -->
 
 ## Additional information
 
-<!-- Any other relevant information about the service. -->
+<!-- Any other relevant information about the organization. -->
 
 ## Checklist
 
-- [ ] The service is headquartered in Europe
-- [ ] The service is currently active and accessible
-- [ ] The service is crypto/blockchain-related
-- [ ] The service has an innovative crypto/blockchain solution as a significant part of its offering
+- [ ] The organization is headquartered in Europe
+- [ ] The organization is currently active and operational
+- [ ] The organization has a clear focus on sustainability, ESG, social impact, or green technology
+- [ ] The organization is relevant for EU funding and grant applications (Förderanträge)
 - [ ] I have provided all the required information above

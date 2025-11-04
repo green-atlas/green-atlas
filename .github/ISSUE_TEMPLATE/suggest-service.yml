@@ -1,22 +1,22 @@
-name: Suggest a Service for the European Crypto Atlas
-description: Suggest a European Crypto service to be added to Crypto Atlas
-title: 'Suggesting a new service'
-labels: ['new-service']
+name: Suggest an Organization for Green Atlas
+description: Suggest a European sustainability organization to be added to Green Atlas
+title: 'Suggesting a new organization'
+labels: ['new-organization']
 body:
   - type: markdown
     attributes:
       value: |
-        👉 Please add the details for the new service below
+        👉 Please add the details for the new organization below
 
-        We list European Crypto services that are currently active and ready-to-use.
+        We list European organizations focused on sustainability, ESG, social impact, and green technology that are currently active and operational.
 
-        Thanks for taking the time to suggest a service! 🙌
+        Thanks for taking the time to suggest an organization! 🌱
   - type: input
-    id: service-name
+    id: organization-name
     attributes:
-      label: Service Name
-      description: What's the name of the Crypto service?
-      placeholder: 'Example: Crypto Atlas'
+      label: Organization Name
+      description: What's the name of the organization?
+      placeholder: 'Example: Green Atlas'
     validations:
       required: true
 
@@ -24,7 +24,7 @@ body:
     id: website
     attributes:
       label: Website
-      description: The service's official website
+      description: The organization's official website
       placeholder: 'https://example.com'
     validations:
       required: true
@@ -33,24 +33,23 @@ body:
     id: category
     attributes:
       label: Category
-      description: Which category fits this service best?
+      description: Which category fits this organization best?
       options:
-        - Chat
-        - Assistants
-        - Audio
-        - Marketplace
-        - Coding
-        - Image
-        - Video
-        - Automation
-        - Customer Service Crypto
-        - Inference API
-        - Personalization
-        - Translation
-        - Education
-        - Analytics
-        - Infrastructure
-        - Crypto Models
+        - Climate Action
+        - Circular Economy
+        - Green Technology
+        - Social Impact & Inclusion
+        - ESG & Governance
+        - Renewable Energy
+        - Sustainable Finance
+        - Conservation & Biodiversity
+        - Sustainable Agriculture
+        - Clean Mobility
+        - Waste Management
+        - Water Resources
+        - Environmental Education
+        - Policy & Advocacy
+        - Research & Innovation
         - Other (please specify in description)
     validations:
       required: true
@@ -59,8 +58,8 @@ body:
     id: description
     attributes:
       label: Description
-      description: Briefly describe what the service does and what Crypto features it offers (max 150 characters)
-      placeholder: 'Example: Video editing tool that uses Crypto to create videos from images...'
+      description: Briefly describe the organization's sustainability focus and impact (max 150 characters)
+      placeholder: 'Example: Non-profit advancing circular economy practices across European industries...'
     validations:
       required: true
 
@@ -123,16 +122,18 @@ body:
       label: Requirements
       description: Please confirm the following
       options:
-        - label: The service is currently active and available to use (not just a waitlist)
+        - label: The organization is currently active and operational
           required: true
-        - label: The service uses Crypto/Blockchain as an important part of its main feature set
+        - label: The organization has a clear focus on sustainability, ESG, social impact, or green technology
           required: true
-        - label: I've checked that this service isn't already listed
+        - label: The organization is relevant for EU funding and grant applications (Förderanträge)
+          required: true
+        - label: I've checked that this organization isn't already listed
           required: true
 
   - type: textarea
     id: additional
     attributes:
       label: Additional Information
-      description: Anything else you'd like to tell us about this service?
+      description: Anything else you'd like to tell us about this organization?
       placeholder: 'Optional: Any other details that might be helpful...'
