@@ -1,4 +1,4 @@
-import { Category } from '../data/services';
+import { Category } from '../data/organizations';
 
 interface FilterSectionProps {
   showNewOnly: boolean;
@@ -31,7 +31,7 @@ export const FilterSection = ({
     <div className="mb-8">
       <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-4">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          Services
+          Organizations
         </h2>
         <button
           onClick={() => setShowNewOnly(!showNewOnly)}
@@ -55,16 +55,16 @@ export const FilterSection = ({
             />
           </svg>
           <span className="font-medium">
-            {showNewOnly ? 'Show all services' : 'Show newly added'}
+            {showNewOnly ? 'Show all organizations' : 'Show newly added'}
           </span>
           {showNewOnly && (
             <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-medium bg-[var(--eu-blue)] text-white rounded">
               {filteredCategories.reduce(
                 (count, category) =>
                   count +
-                  category.services.filter((service) => {
-                    if (!service.addedDate) return false;
-                    return isNewThisMonth(new Date(service.addedDate));
+                  category.organizations.filter((organization) => {
+                    if (!organization.addedDate) return false;
+                    return isNewThisMonth(new Date(organization.addedDate));
                   }).length,
                 0
               )}

@@ -54,7 +54,7 @@ We welcome contributions from the community! Here's how you can help:
 ### Adding a New Organization or Initiative
 
 1. Fork the repository
-2. Edit the `src/data/services.ts` file to add a new organization/initiative to the appropriate category
+2. Edit the `src/data/organizations.ts` file to add a new organization/initiative to the appropriate category
 3. Follow this format:
    ```typescript
    {

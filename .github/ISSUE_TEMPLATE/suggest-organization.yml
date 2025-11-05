@@ -66,8 +66,8 @@ body:
   - type: dropdown
     id: country
     attributes:
-      label: Company's Main Location
-      description: In which European country is the company mainly based?
+      label: Organization's Main Location
+      description: In which European country is the organization mainly based?
       options:
         - 🇦🇹 Austria
         - 🇧🇪 Belgium
@@ -113,7 +113,7 @@ body:
     id: legal-country
     attributes:
       label: Legal Registration Country
-      description: If the company is legally registered in a different country, please specify (optional). This is often visible in their terms of service.
+      description: If the organization is legally registered in a different country, please specify (optional). This is often visible in their terms of service.
       placeholder: 'Example: United States'
 
   - type: checkboxes

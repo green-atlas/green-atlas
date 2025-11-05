@@ -1,7 +1,7 @@
 // Sustainability organization data for the European Green Atlas
 // Each category contains organizations with their details
 
-export interface Service {
+export interface Organization {
   name: string;
   description: string;
   icon: string;
@@ -17,7 +17,7 @@ export interface Category {
   name: string;
   icon: string;
   color: string;
-  services: Service[];
+  organizations: Organization[];
 }
 
 export const categories: Category[] = [
@@ -26,7 +26,7 @@ export const categories: Category[] = [
     name: 'Climate Action',
     icon: '🌍',
     color: 'bg-[#22C55E]',
-    services: [
+    organizations: [
       {
         name: 'European Climate Foundation',
         description:
@@ -50,7 +50,7 @@ export const categories: Category[] = [
     name: 'Circular Economy',
     icon: '♻️',
     color: 'bg-[#10B981]',
-    services: [
+    organizations: [
       {
         name: 'Ellen MacArthur Foundation',
         description:
@@ -66,7 +66,7 @@ export const categories: Category[] = [
     name: 'Renewable Energy',
     icon: '⚡',
     color: 'bg-[#FCD34D]',
-    services: [
+    organizations: [
       {
         name: 'WindEurope',
         description:
@@ -90,7 +90,7 @@ export const categories: Category[] = [
     name: 'Sustainable Mobility',
     icon: '🚊',
     color: 'bg-[#3B82F6]',
-    services: [
+    organizations: [
       {
         name: 'Transport & Environment',
         description:
@@ -106,7 +106,7 @@ export const categories: Category[] = [
     name: 'ESG & Governance',
     icon: '📊',
     color: 'bg-[#8B5CF6]',
-    services: [
+    organizations: [
       {
         name: 'Eurosif',
         description:
@@ -122,7 +122,7 @@ export const categories: Category[] = [
     name: 'Social Impact & Inclusion',
     icon: '🤝',
     color: 'bg-[#EC4899]',
-    services: [
+    organizations: [
       {
         name: 'Ashoka Europe',
         description:
@@ -146,7 +146,7 @@ export const categories: Category[] = [
     name: 'Green Technology',
     icon: '💻',
     color: 'bg-[#06B6D4]',
-    services: [
+    organizations: [
       {
         name: 'Green Digital Coalition',
         description:
@@ -162,7 +162,7 @@ export const categories: Category[] = [
     name: 'Sustainable Finance',
     icon: '💰',
     color: 'bg-[#14B8A6]',
-    services: [
+    organizations: [
       {
         name: 'European Investment Bank',
         description:
@@ -178,7 +178,7 @@ export const categories: Category[] = [
     name: 'Biodiversity & Conservation',
     icon: '🦋',
     color: 'bg-[#84CC16]',
-    services: [
+    organizations: [
       {
         name: 'BirdLife Europe',
         description:
@@ -194,7 +194,7 @@ export const categories: Category[] = [
     name: 'Sustainable Agriculture',
     icon: '🌾',
     color: 'bg-[#A3E635]',
-    services: [
+    organizations: [
       {
         name: 'IFOAM Organics Europe',
         description:
@@ -210,7 +210,7 @@ export const categories: Category[] = [
     name: 'Research & Education',
     icon: '📚',
     color: 'bg-[#7C3AED]',
-    services: [
+    organizations: [
       {
         name: 'European Environment Agency',
         description:
@@ -234,7 +234,7 @@ export const categories: Category[] = [
     name: 'EU Policy & Frameworks',
     icon: '🇪🇺',
     color: 'bg-[#003399]',
-    services: [
+    organizations: [
       {
         name: 'European Commission - Green Deal',
         description:
@@ -250,7 +250,7 @@ export const categories: Category[] = [
     name: 'Waste & Resource Management',
     icon: '🗑️',
     color: 'bg-[#78716C]',
-    services: [
+    organizations: [
       {
         name: 'Zero Waste Europe',
         description:
@@ -266,7 +266,7 @@ export const categories: Category[] = [
     name: 'Water & Ocean Conservation',
     icon: '💧',
     color: 'bg-[#0EA5E9]',
-    services: [
+    organizations: [
       {
         name: 'Surfrider Foundation Europe',
         description:
@@ -282,7 +282,7 @@ export const categories: Category[] = [
     name: 'Funding & Grant Programs',
     icon: '💶',
     color: 'bg-[#F59E0B]',
-    services: [
+    organizations: [
       {
         name: 'LIFE Programme',
         description:

@@ -1,16 +1,16 @@
-import { Service } from '@/data/services';
-import { Category } from '@/data/services';
+import { Organization } from '@/data/organizations';
+import { Category } from '@/data/organizations';
 import { getFaviconUrl } from '@/utils/favicon';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-interface ServiceCardProps {
-  service: Service;
+interface OrganizationCardProps {
+  organization: Organization;
   category: Category;
 }
 
-// Helper function to check if a service is new (added in the current month)
+// Helper function to check if an organization is new (added in the current month)
 const isNewThisMonth = (addedDate?: string): boolean => {
   if (!addedDate) return false;
 
@@ -26,16 +26,16 @@ const isNewThisMonth = (addedDate?: string): boolean => {
   );
 };
 
-export const ServiceCard = ({ service }: ServiceCardProps) => {
+export const OrganizationCard = ({ organization }: OrganizationCardProps) => {
   const [showEmoji, setShowEmoji] = useState(true);
   const [imageError, setImageError] = useState(false);
-  const faviconUrl = getFaviconUrl(service.link);
-  const isNew = isNewThisMonth(service.addedDate);
+  const faviconUrl = getFaviconUrl(organization.link);
+  const isNew = isNewThisMonth(organization.addedDate);
 
   return (
     <Link
-      href={service.link}
-      key={service.name}
+      href={organization.link}
+      key={organization.name}
       target="_blank"
       className="atlas-card p-5 flex flex-col h-full"
     >
@@ -46,7 +46,7 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
           {faviconUrl && !imageError && (
             <Image
               src={faviconUrl}
-              alt={`${service.name} favicon`}
+              alt={`${organization.name} favicon`}
               width={24}
               height={24}
               className="w-6 h-6 object-contain"
@@ -60,18 +60,18 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
               }}
             />
           )}
-          {showEmoji && <span>{service.icon}</span>}
+          {showEmoji && <span>{organization.icon}</span>}
         </div>
         <div>
           <h3 className="text-xl font-semibold flex items-center gap-2">
-            {service.name}
+            {organization.name}
             <div className="flex items-center gap-1">
               <span className="text-base" title="Country of origin">
-                {service.country}
+                {organization.country}
               </span>
-              {service.hq && service.legal && (
+              {organization.hq && organization.legal && (
                 <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">
-                  ( Reg. {service.legal})
+                  ( Reg. {organization.legal})
                 </span>
               )}
             </div>
@@ -84,7 +84,7 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
         </div>
       </div>
       <p className="text-gray-600 dark:text-gray-400 flex-grow">
-        {service.description}
+        {organization.description}
       </p>
       <div className="mt-3 flex justify-end">
         <span className="text-[var(--eu-blue)] dark:text-[var(--eu-yellow)] font-medium flex items-center gap-1">

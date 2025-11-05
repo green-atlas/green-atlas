@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { categories } from '../data/services';
-import { ServiceCard } from '../components/ServiceCard';
+import { categories } from '../data/organizations';
+import { OrganizationCard } from '../components/OrganizationCard';
 import NewsletterSubscription from '../components/NewsletterSubscription';
 import ActionButton from '../components/ActionButton';
 import { FilterSection } from '../components/FilterSection';
@@ -22,12 +22,12 @@ export default function Home() {
     setMobileMenuOpen(false);
   };
 
-  // Filter categories to only show those with new services when showNewOnly is true
+  // Filter categories to only show those with new organizations when showNewOnly is true
   const filteredCategories = showNewOnly
     ? categories.filter((category) =>
-        category.services.some((service) => {
-          if (!service.addedDate) return false;
-          const added = new Date(service.addedDate);
+        category.organizations.some((organization) => {
+          if (!organization.addedDate) return false;
+          const added = new Date(organization.addedDate);
           const today = new Date();
           // Consider future dates as new
           if (added > today) return true;
@@ -249,11 +249,11 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {category.services
-                    .filter((service) => {
+                  {category.organizations
+                    .filter((organization) => {
                       if (!showNewOnly) return true;
-                      if (!service.addedDate) return false;
-                      const added = new Date(service.addedDate);
+                      if (!organization.addedDate) return false;
+                      const added = new Date(organization.addedDate);
                       const today = new Date();
                       // Consider future dates as new
                       if (added > today) return true;
@@ -262,10 +262,10 @@ export default function Home() {
                         added.getMonth() === today.getMonth()
                       );
                     })
-                    .map((service) => (
-                      <ServiceCard
-                        key={service.name}
-                        service={service}
+                    .map((organization) => (
+                      <OrganizationCard
+                        key={organization.name}
+                        organization={organization}
                         category={category}
                       />
                     ))}

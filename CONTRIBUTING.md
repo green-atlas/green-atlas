@@ -28,7 +28,7 @@ The most common contribution is adding a new European sustainability organizatio
 
 ### Step 2: Add the Organization
 
-1. Open the `src/data/services.ts` file.
+1. Open the `src/data/organizations.ts` file.
 2. Find the appropriate category for your organization.
 3. Add a new organization entry following this format:
    ```typescript
@@ -58,7 +58,7 @@ The most common contribution is adding a new European sustainability organizatio
 
 1. Commit your changes:
    ```bash
-   git add src/data/services.ts
+   git add src/data/organizations.ts
    git commit -m "Add [Organization Name] to [Category]"
    ```
 2. Push to your forked repository:
@@ -88,7 +88,7 @@ When adding a new organization, please ensure it meets the following criteria:
 If you believe a new category is needed:
 
 1. Open an issue first to discuss the proposed category.
-2. Once approved, update the `src/data/services.ts` file to add the new category following the existing pattern.
+2. Once approved, update the `src/data/organizations.ts` file to add the new category following the existing pattern.
 
 ## Code Style
 
